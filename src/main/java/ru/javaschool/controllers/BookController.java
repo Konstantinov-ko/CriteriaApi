@@ -2,6 +2,7 @@ package ru.javaschool.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import ru.javaschool.BookFilter;
 import ru.javaschool.dao.api.BookDao;
 import ru.javaschool.model.Book;
 
@@ -27,5 +28,10 @@ public class BookController {
     @RequestMapping(value = "/book/get/", method = RequestMethod.GET)
     public Book getBook(@RequestParam("id") Long id) {
         return bookDao.get(id);
+    }
+
+    @RequestMapping(value = "/book/getByFilter/", method = RequestMethod.POST)
+    public List<Book> createAuthorList(@RequestBody BookFilter bookFilter) {
+        return bookDao.getBooksByFilter(bookFilter);
     }
 }

@@ -33,11 +33,11 @@
             <version>5.4.1.Final</version>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-jpamodelgen</artifactId>
             <version>5.2.10.Final</version>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -104,9 +104,9 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <!--<compilerArguments>
+                    <compilerArguments>
                         <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
-                    </compilerArguments>-->
+                    </compilerArguments>
                 </configuration>
             </plugin>
             <plugin>

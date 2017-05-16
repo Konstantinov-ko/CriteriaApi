@@ -28,4 +28,9 @@ public class AuthorController {
     public Author getAuthor(@RequestParam("id") Long id) {
         return authorDao.get(id);
     }
+
+    @RequestMapping(value = "/author/getAll/", method = RequestMethod.GET)
+    public List<Author> getAllAuthors() {
+        return authorDao.getAuthorList();
+    }
 }
