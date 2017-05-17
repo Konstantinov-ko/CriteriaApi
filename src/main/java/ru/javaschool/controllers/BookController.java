@@ -34,4 +34,9 @@ public class BookController {
     public List<Book> createAuthorList(@RequestBody BookFilter bookFilter) {
         return bookDao.getBooksByFilter(bookFilter);
     }
+
+    @RequestMapping(value = "/book/getAll/", method = RequestMethod.GET)
+    public List<Book> getAllBooks() {
+        return bookDao.getAll();
+    }
 }

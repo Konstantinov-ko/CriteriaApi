@@ -5,5 +5,7 @@ import ru.javaschool.model.Author;
 import java.util.List;
 
 public interface AuthorDao extends GenericDao<Author, Long> {
-    List<Author> getAuthorList();
+    List<Author> getAuthorsByBooksAmount(Long amount);
+
+    List<Object[]> getAllAuthorsAndBooksAmount();
 }

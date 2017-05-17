@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
-@Table(name="book")
+@Table(name = "book")
 public class Book {
     @Id
     @Column(unique = true)

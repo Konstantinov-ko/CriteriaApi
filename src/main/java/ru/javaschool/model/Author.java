@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="author")
+@Table(name = "author")
 public class Author {
     @Id
     @Column(unique = true)

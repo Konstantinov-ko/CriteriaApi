@@ -31,6 +31,16 @@ public class AuthorController {
 
     @RequestMapping(value = "/author/getAll/", method = RequestMethod.GET)
     public List<Author> getAllAuthors() {
-        return authorDao.getAuthorList();
+        return authorDao.getAll();
+    }
+
+    @RequestMapping(value = "/author/getAuthorsByBooksAmount/", method = RequestMethod.GET)
+    public List<Author> getAuthorsByBooksAmount(@RequestParam("amount") Long amount) {
+        return authorDao.getAuthorsByBooksAmount(amount);
+    }
+
+    @RequestMapping(value = "/author/getAllAuthorsAndBooksAmount/", method = RequestMethod.GET)
+    public List<Object[]> getAllAuthorsAndBooksAmount() {
+        return authorDao.getAllAuthorsAndBooksAmount();
     }
 }
